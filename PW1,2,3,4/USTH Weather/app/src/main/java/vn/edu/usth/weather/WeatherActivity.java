@@ -6,12 +6,16 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager.widget.PagerAdapter;
-
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import java.util.Locale;
 
 public class WeatherActivity extends AppCompatActivity {
     private ViewPager viewPager;
@@ -21,6 +25,7 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //set.
         setContentView(R.layout.activity_weather);
         Log.i(tag, "On Creating");
 
@@ -38,6 +43,17 @@ public class WeatherActivity extends AppCompatActivity {
                     break;
             }
         }).attach();
+        private void setVietnamese(); {
+            Locale locale = new Locale("vi");
+            Locale.setDefault(locale);
+            Configuration configuration = new Configuration();
+            configuration.locale = locale;
+            getBaseContext().getResources().updateConfiguration(configuration, getBaseContext().getResources().getDisplayMetrics());
+
+            SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+            editor.putString("My Lang", "vi");
+            editor.apply();
+        }
     }
 
     @Override
