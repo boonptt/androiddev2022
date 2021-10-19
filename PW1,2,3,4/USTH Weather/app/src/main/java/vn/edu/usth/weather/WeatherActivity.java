@@ -17,6 +17,7 @@ import android.view.View;
 
 import java.util.Locale;
 
+@SuppressWarnings("unused")
 public class WeatherActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private TabLayout tabLayout;
@@ -43,17 +44,6 @@ public class WeatherActivity extends AppCompatActivity {
                     break;
             }
         }).attach();
-        private void setVietnamese(); {
-            Locale locale = new Locale("vi");
-            Locale.setDefault(locale);
-            Configuration configuration = new Configuration();
-            configuration.locale = locale;
-            getBaseContext().getResources().updateConfiguration(configuration, getBaseContext().getResources().getDisplayMetrics());
-
-            SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
-            editor.putString("My Lang", "vi");
-            editor.apply();
-        }
     }
 
     @Override
