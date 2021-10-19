@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">USTH Weather</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="todo">TODO</string>
+    <string name="Sun">mặt trời</string>
+    <string name="Rain">mưa</string>
+    <string name="Thunder">Sấm</string>
+    <string name="monday">Thứ 2</string>
+    <string name="tuesday">Thứ 3</string>
+    <string name="wednesday">Thứ 4</string>
+    <string name="thursday">Thứ 5</string>
+    <string name="friday">Thứ 6</string>
+    <string name="saturday">Thứ 7</string>
+    <string name="sunday">Chủ Nhật</string>
+</resources>
